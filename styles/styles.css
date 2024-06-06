@@ -12,17 +12,18 @@
 
 :root {
   /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
-  --background-color: white;
+  --brand-color: #d2202f;
+  --link-color: var(--brand-color);
+  --link-hover-color: #bc1d2a;
+  --background-color: #eeecd8;
+  --text-color: #3e3c33;
   --light-color: #eee;
   --dark-color: #ccc;
-  --text-color: black;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: "Roboto Mono", menlo, consolas, "Liberation Mono", monospace;
+  --body-font-family: myriadpro-light;
+  --nav-font-family: var(--body-font-family);
+  --heading-font-family: nexarustsansblack;
 
   /* body sizes */
   --body-font-size-m: 22px;
