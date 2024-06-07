@@ -19,11 +19,13 @@
   --text-color: #3e3c33;
   --light-color: #eee;
   --dark-color: #ccc;
+  --white-color: #fff;
 
   /* fonts */
   --body-font-family: myriadpro-light;
-  --nav-font-family: var(--body-font-family);
+  --nav-font-family: myriadpro-regular;
   --heading-font-family: nexarustsansblack;
+  --footer-font-family: var(--nav-font-family);
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -39,7 +41,7 @@
   --heading-font-size-xs: 18px;
 
   /* header */
-  --nav-height: 64px;
+  --nav-height: 94px;
   --breadcrumbs-height: 35px;
   --header-height: var(--nav-height);
   --breadcrumbs-font-size: 14px;

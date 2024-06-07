@@ -3,7 +3,33 @@ header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
   z-index: 2;
-  position: fixed;
+  position: relative;
+}
+
+.top-nav-section .default-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-nav-el-0 {
+  margin: 0;
+}
+
+.top-nav-el-1 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.top-nav-el-1 picture {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.top-nav-el-1 picture img{
+  width: auto;
+  height: 1.6rem;
 }
 
 header nav#nav {
@@ -18,7 +44,7 @@ header nav#nav {
   max-width: 1264px;
   height: var(--nav-height);
   padding: 0 1rem;
-  font-family: var(--body-font-family);
+  font-family: var(--nav-font-family);
 }
 
 header nav#nav[aria-expanded="true"] {
@@ -30,9 +56,17 @@ header nav#nav[aria-expanded="true"] {
   min-height: 100vh;
 }
 
+header nav#nav .nav-tools {
+  grid-area: tools;
+}
+
+header nav#nav[aria-expanded="false"] .nav-tools {
+  display: none;
+}
+
 @media (width >= 600px) {
-  header nav#nav {
-    padding: 0 2rem;
+  header nav#nav, .top-nav-section {
+    padding: 2px 2rem;
   }
 }
 
@@ -54,7 +88,6 @@ header nav#nav p {
 }
 
 header nav#nav a:any-link {
-  color: currentcolor;
   display: block;
 }
 
@@ -149,11 +182,16 @@ header .nav-brand {
 }
 
 header nav#nav .nav-brand img {
-  width: 128px;
+  width: 120px;
   height: auto;
 }
 
 /* sections */
+.top-nav-section {
+  font-size: 0.9rem;
+  color: var(--brand-color);
+}
+
 header nav#nav .nav-sections {
   grid-area: sections;
   flex: 1 1 auto;
@@ -275,15 +313,16 @@ header nav#nav .nav-sections ul > li > ul > li {
 }
 
 /* tools */
-header nav#nav .nav-tools {
-  grid-area: tools;
-}
-
 header nav#nav .nav-tools .button {
-  background: none;
-  border: none;
-  padding: 10px;
-  margin: 0;
+  font-size: 1rem;
+  line-height: 3.38;
+  font-family: var(--heading-font-family);
+  padding: 0 1.5625rem;
+  border-radius: 3.125rem;
+  font-weight: bold;
+  background-color: var(--brand-color);
+  color: var(--white-color);
+  margin-left: auto;
 }
 
 /* breadcrumbs */
