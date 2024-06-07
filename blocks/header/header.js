@@ -211,6 +211,14 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 
+  const topSection = block.querySelector('.top-nav-section');
+  navWrapper.prepend(topSection);
+
+  const topSectionChildEls = topSection.querySelectorAll('p');
+  topSectionChildEls.forEach((a, i) => {
+    a.classList.add(`top-nav-el-${i}`);
+  });
+
   if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
     navWrapper.append(await buildBreadcrumbs());
   }
