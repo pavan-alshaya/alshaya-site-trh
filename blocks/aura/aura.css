@@ -29,6 +29,7 @@ body.aura .icon {
   background: var(--primary-gradient);
   border-radius: 0.625rem;
 }
+
 .aura-card .two-columns div div:first-child {
   flex: 0 0 35%;
   display: flex;
@@ -39,6 +40,45 @@ body.aura .icon {
   text-align: center;
   color: var(--white-color);
   font-family:  var(--aura-card-font-family);
+}
+
+.col-level-1, .benifits-details div p:nth-child(2) {
+  display: none;
+  font-size: 10px;
+  padding: 0.5rem;
+  color: var(--aura-blue);
+  background-color: var(--white-color);
+  box-shadow: 0 2px 20px 0 var(--text-color);
+  border-radius: 0.25rem;
+}
+
+.benifits-details .columns-wrapper p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--aura-blue);
+  font-family: var(--aura-paragraph-font-family);
+  padding: 1.5rem 0;
+  border-bottom: 0.0625rem solid var(--background-color);
+}
+
+.benifits-details div p:first-child:hover + p   {
+  font-size: 0.8rem;
+  max-width: 8.75rem;
+  display: flex;
+  position: absolute;
+  background: var(--white-color);
+  color: var (--text-color);
+  transform: translateY(calc(-100% - 0.9375rem));
+  z-index: 10;
+  justify-content: flex-start;
+  left: 8rem;
+  top: 3rem;
+}
+
+.aura-card .two-columns div div:nth-child(2)  p  {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .aura-card .two-columns div div:nth-child(2)  p:nth-child(2) {
@@ -53,51 +93,12 @@ body.aura .icon {
   padding-top: 0;
 }
 
-.aura-card .two-columns div div:nth-child(2)  p  {
-  margin-bottom: 0;
-  display: flex;
-  justify-content: center;
-}
-
 .aura-card .two-columns div div:nth-child(2) img{
   max-width: 16rem;
 }
 
 .benifits-details .columns-wrapper, .benifits-details td {
   position: relative;
-}
-
-.benifits-details .columns-wrapper p:first-child {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--aura-blue);
-  font-family: var(--aura-paragraph-font-family);
-  padding: 1.5rem 0;
-  border-bottom: 0.0625rem solid var(--background-color);
-}
-
-.col-level-1, .benifits-details div p:nth-child(2) {
-  display: none;
-  font-size: 10px;
-  padding: 0.5rem;
-  color: var(--aura-blue);
-  background-color: var(--white-color);
-  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .24);
-  border-radius: 0.25rem;
-}
-
- .benifits-details div p:first-child:hover + p   {
-  font-size: 0.8rem;
-  max-width: 8.75rem;
-  display: flex;
-  position: absolute;
-  background: var(--white-color);
-  color: var (--text-color);
-  transform: translateY(calc(-100% - 0.9375rem));
-  z-index: 10;
-  justify-content: flex-start;
-  left: 8rem;
-  top: 3rem;
 }
 
 .benifits-details  div p:first-child::after {
@@ -117,7 +118,7 @@ body.aura .icon {
   border-radius: 50%;
 }
 
-.benifits-details div p:first-child + p:after  {
+.benifits-details div p:first-child + p::after  {
   content: "";
   position: absolute;
   border: 0.625rem solid transparent;
@@ -170,12 +171,12 @@ body.aura .table-wrapper table tr td:nth-child(2), body.aura .table-wrapper tabl
 body.aura .table-wrapper table tr td:nth-child(4), body.aura .table-wrapper table tr th:nth-child(4) {
   color: var(--aura-violet);
 }
+
 .mobile {
   display: none;
 }
 
 @media (width < 767px) {
-
   .aura-title  h1 {
     font-size: var( --body-font-size-xs);
     margin-bottom: 2rem;
@@ -216,7 +217,6 @@ body.aura .table-wrapper table tr td:nth-child(4), body.aura .table-wrapper tabl
   }
 
   .benifits-details .table-wrapper table tr td p:first-child:hover + p   {
-
     left: 1rem;
     top: 0.8rem;
   }

@@ -31,10 +31,10 @@
   --primary-gradient: linear-gradient(89.85deg, #772583 .13%, #e31c79 51.57%, #eeb46f 99.88%);
 
   /* Aura page */
-  --aura-heading-font-family: Almarai;
-  --aura-paragraph-heading-font-family: Almarai;
-  --aura-paragraph-font-family: PTSans;
-  --aura-card-font-family: PTSansRegular;
+  --aura-heading-font-family: almarai;
+  --aura-paragraph-heading-font-family: almarai;
+  --aura-paragraph-font-family: ptsans;
+  --aura-card-font-family: ptsansregular;
 
   /* fonts */
   --body-font-family: myriadpro-light;

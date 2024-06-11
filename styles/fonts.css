@@ -45,7 +45,7 @@
 }
 
 @font-face {
-  font-family: 'Almarai';
+  font-family: almarai;
   src:  url('../fonts/AlmaraiLight.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -54,7 +54,7 @@
 }
 
 @font-face {
-  font-family: 'PTSans';
+  font-family: ptsans;
   src:  url('../fonts/PTSansBold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -63,7 +63,7 @@
 }
 
 @font-face {
-  font-family: 'PTSansRegular';
+  font-family: ptsansregular;
   src:  url('../fonts/PTSansRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
