@@ -60,11 +60,16 @@ footer .footer {
 @media (width < 768px) {
   .footer-wrapper p {
     width: 100%;
+    margin: 0;
+  }
+
+  .footer-container .default-content-wrapper {
+    padding-bottom: 2rem;
   }
 
   .footer-wrapper a {
     width: 100%;
-    margin: .8125rem 0 .6875rem;
+    margin: 1.5rem 0;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -89,9 +94,9 @@ footer .footer {
 
   .footer-container .default-content-wrapper p:last-child {
     position: absolute;
-    top: 0;
+    top: 1rem;
     z-index: 2;
-    right: 2.5rem;
+    right: 1rem;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -112,5 +117,19 @@ footer .footer {
   .icon-instagram,
   .icon-ticktok {
     display: none;
+  }
+
+  .icon {
+    margin: 0;
+  }
+
+  .footer-wrapper .default-content-wrapper img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .copy-right {
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }

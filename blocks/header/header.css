@@ -25,6 +25,9 @@ header .nav-wrapper {
  position: relative;
  list-style: none;
  cursor: pointer;
+ display: flex;
+ align-items: flex-start;
+ gap: 5px;
 }
 
 .top-nav-section .top-nav-el-1 ~ ul {
@@ -44,6 +47,7 @@ header .nav-wrapper {
   left: 0;
   border: 1px solid #ccc;
   padding: 0.5rem 2rem;
+  min-width: 150px;
 }
 
 .top-nav-section .default-content-wrapper > ul li:hover ul {
@@ -61,6 +65,11 @@ header .nav-wrapper {
 
 .top-nav-el-0 {
   margin: 0;
+}
+
+.top-nav-el-0 img {
+  position: relative;
+  top: 0.2rem;
 }
 
 .top-nav-section .default-content-wrapper > ul li a {
@@ -439,11 +448,20 @@ header .breadcrumbs ol li:last-of-type {
     grid-template: "tools brand hamburger";
   }
 
+  .top-nav-section {
+    padding: 0 1rem;
+  }
+
   .top-nav-section .default-content-wrapper {
     top: 1rem;
   }
 
-  .nav-hamburger, .nav-brand {
+  .nav-hamburger {
+    display: flex;
+    justify-content: end;
+  }
+
+  .nav-brand {
     display: flex;
     justify-content: center;
   }
@@ -469,5 +487,10 @@ header .breadcrumbs ol li:last-of-type {
     border-left: .25rem solid transparent;
     margin-left: 0.2rem;
     margin-right: 0.3rem;
+  }
+
+  .top-nav-section .default-content-wrapper > ul li > picture {
+    position: relative;
+    top: 0.1rem;
   }
 }
