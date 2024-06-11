@@ -21,6 +21,20 @@
   --dark-color: #ccc;
   --white-color: #fff;
   --border-color: #d3d3d3;
+  --aura-pink: #e31c79;
+  --aura-blue: #22326e;
+  --aura-violet: #772583;
+  --table-background: #f7f7f7;
+
+
+  /* Aura page */
+  --primary-gradient: linear-gradient(89.85deg, #772583 .13%, #e31c79 51.57%, #eeb46f 99.88%);
+
+  /* Aura page */
+  --aura-heading-font-family: almarai;
+  --aura-paragraph-heading-font-family: almarai;
+  --aura-paragraph-font-family: ptsans;
+  --aura-card-font-family: ptsansregular;
 
   /* fonts */
   --body-font-family: myriadpro-light;
