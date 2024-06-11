@@ -1,0 +1,229 @@
+body.aura main {
+  background: var(--white-color);
+}
+
+body.aura .section {
+  padding-top: 0;
+  padding-bottom: 0;
+  max-width: 1130px;
+  margin: auto;
+}
+
+body.aura .icon {
+  width: auto;
+  height: auto;
+}
+
+.aura-title  h1 {
+  font-family: var(--aura-heading-font-family);
+  font-weight: 300;
+  padding-top: 2rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+  border-bottom: 0.0625rem solid var(--text-color);
+  font-size: var( --heading-font-size-s);
+}
+
+.aura-card .two-columns {
+  padding: 2.5rem 2rem;
+  background: var(--primary-gradient);
+  border-radius: 0.625rem;
+}
+.aura-card .two-columns div div:first-child {
+  flex: 0 0 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.aura-card .two-columns div div:nth-child(2) {
+  text-align: center;
+  color: var(--white-color);
+  font-family:  var(--aura-card-font-family);
+}
+
+.aura-card .two-columns div div:nth-child(2)  p:nth-child(2) {
+  font-size: var(--body-font-size-s);
+  font-family:  var(--aura-heading-font-family);
+}
+
+.aura-card .two-columns div div:nth-child(2) p:first-child {
+  font-size: var(--heading-font-size-s);
+  line-height: 1.33;
+  padding-bottom: 1rem;
+  padding-top: 0;
+}
+
+.aura-card .two-columns div div:nth-child(2)  p  {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.aura-card .two-columns div div:nth-child(2) img{
+  max-width: 16rem;
+}
+
+.benifits-details .columns-wrapper, .benifits-details td {
+  position: relative;
+}
+
+.benifits-details .columns-wrapper p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--aura-blue);
+  font-family: var(--aura-paragraph-font-family);
+  padding: 1.5rem 0;
+  border-bottom: 0.0625rem solid var(--background-color);
+}
+
+.col-level-1, .benifits-details div p:nth-child(2) {
+  display: none;
+  font-size: 10px;
+  padding: 0.5rem;
+  color: var(--aura-blue);
+  background-color: var(--white-color);
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .24);
+  border-radius: 0.25rem;
+}
+
+ .benifits-details div p:first-child:hover + p   {
+  font-size: 0.8rem;
+  max-width: 8.75rem;
+  display: flex;
+  position: absolute;
+  background: var(--white-color);
+  color: var (--text-color);
+  transform: translateY(calc(-100% - 0.9375rem));
+  z-index: 10;
+  justify-content: flex-start;
+  left: 8rem;
+  top: 3rem;
+}
+
+.benifits-details  div p:first-child::after {
+  content: "?";
+  font-size: 0.75rem;
+  color: var(--white-color);
+  position: relative;
+  bottom: 0.2rem;
+  left: 0.3rem;
+  font-style: normal;
+  width: 1.125rem;
+  height: 1.125rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--aura-violet);
+  border-radius: 50%;
+}
+
+.benifits-details div p:first-child + p:after  {
+  content: "";
+  position: absolute;
+  border: 0.625rem solid transparent;
+  border-top-color: var(--white-color);
+  bottom: -1.1875rem;
+  right: 0.9375rem;
+}
+
+body.aura  .benifits-details {
+  padding-bottom: 4rem;
+}
+
+.benifits-details  .columns-wrapper p strong {
+  color: var(--aura-pink);
+}
+
+body.aura .table-wrapper table {
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color : var(--aura-blue);
+  font-family: var( --aura-card-font-family);
+}
+
+body.aura .table-wrapper table th {
+  font-size: 2rem;
+  background-color: var(--white-color);
+  font-family: var(--nav-font-family);
+}
+
+body.aura .table-wrapper table td, body.aura .table-wrapper table th{
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+body.aura .table-wrapper table tr:nth-child(odd) {
+  background-color: var(--table-background);
+}
+
+body.aura .table-wrapper table tr td:first-child  {
+  width: 20%;
+}
+
+body.aura .table-wrapper table tr td:nth-child(2), body.aura .table-wrapper table tr th:nth-child(2) {
+  color: var(--aura-pink);
+}
+
+body.aura .table-wrapper table tr td:nth-child(4), body.aura .table-wrapper table tr th:nth-child(4) {
+  color: var(--aura-violet);
+}
+.mobile {
+  display: none;
+}
+
+@media (width < 767px) {
+
+  .aura-title  h1 {
+    font-size: var( --body-font-size-xs);
+    margin-bottom: 2rem;
+  }
+
+  .aura-card .two-columns {
+    display: block;
+    padding: 1rem 1.25rem 0;
+  }
+
+  .aura-card .two-columns div div:nth-child(2) {
+    max-width: 100%;
+  }
+
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  body.aura .table-wrapper table th {
+    font-size: 1rem;
+    background-color: var(--white-color);
+  }
+
+  body.aura .table-wrapper table tr td {
+    font-size: 0.8rem;
+  }
+
+  body.aura .table-wrapper table tr td:first-child
+  {
+    text-align: left;
+    padding-left: 1rem;
+    width: auto;
+  }
+
+  .benifits-details .table-wrapper table tr td p:first-child:hover + p   {
+
+    left: 1rem;
+    top: 0.8rem;
+  }
+
+  body.aura .table-wrapper table tr td img {
+    width: auto;
+    height: auto;
+    max-width: 1rem;
+  }
+}
