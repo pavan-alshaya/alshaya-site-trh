@@ -10,6 +10,7 @@ header .nav-wrapper {
   display: flex;
   align-items: center;
   position: relative;
+  max-width: 1130px;
 }
 
 .top-nav-el-0 ~ ul {
@@ -94,6 +95,7 @@ header .nav-wrapper {
 .top-nav-el-1 picture img{
   width: auto;
   height: 1.6rem;
+  padding-right: 1rem;
 }
 
 .top-nav-section {
@@ -446,6 +448,8 @@ header .breadcrumbs ol li:last-of-type {
 @media screen and (width <= 767px) {
   header nav#nav {
     grid-template: "tools brand hamburger";
+    padding: 1rem;
+    color: var(--brand-color);
   }
 
   .top-nav-section {
@@ -454,6 +458,7 @@ header .breadcrumbs ol li:last-of-type {
 
   .top-nav-section .default-content-wrapper {
     top: 1rem;
+    left: 1rem;
   }
 
   .nav-hamburger {

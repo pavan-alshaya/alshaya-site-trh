@@ -2,7 +2,7 @@ body.aura main {
   background: var(--white-color);
 }
 
-body.aura .section {
+body.aura main .section {
   padding-top: 0;
   padding-bottom: 0;
   max-width: 1130px;
