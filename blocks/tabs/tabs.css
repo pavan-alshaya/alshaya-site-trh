@@ -44,3 +44,73 @@
 .tabs .tabs-panel[aria-hidden="true"] {
   display: none;
 }
+
+.allergen-nutri-tab.tabs {
+  border: none;
+  color: var(--white-color);
+  background: var(--nutri-table-background);
+  border-radius: 0;
+}
+
+.allergen-nutri-tab.tabs .tabs-list{
+  gap: 0;
+  overflow: initial;
+}
+
+.allergen-nutri-tab.tabs .tabs-list .tabs-tab{
+  flex: 1;
+  border: none;
+  color: var(--white-color);
+  background: var(--nutri-table-background);
+  border-radius: 0;
+  text-align: center;
+  padding: 13px 5px;
+  font-size: 11px;
+}
+
+.allergen-nutri-tab.tabs .tabs-list button[aria-selected="true"] {
+  background: var(--nutri-table-active-bg);
+  position: relative;
+
+}
+
+.allergen-nutri-tab.tabs .tabs-list button[aria-selected="true"]::before{
+  content: "";
+  border: 15px solid transparent;
+  border-top-color: var(--nutri-table-active-bg);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -50%;
+}
+
+.allergen-nutri-tab.tabs .tabs-panel {
+  padding: 0;
+  background: var(--background-color);
+  line-height: 25px;
+  border: 1px solid #ddd;
+  border-top: 5px solid var(--nutri-table-active-bg);
+  border-bottom: 5px solid var(--nutri-table-active-bg);
+}
+
+.allergen-nutri-tab.tabs .tabs-panel img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.allergen-nutri-tab.tabs .tabs-panel > div {
+  margin-top: 1.2rem;
+}
+
+.allergen-nutri-tab.tabs .tabs-panel p {
+  margin: 0;
+  line-height: 0;
+}
+
+@media (width >= 900px) {
+  .allergen-nutri-tab.tabs .tabs-list .tabs-tab{
+    padding: 18px 25px;
+    font-size: var(--body-font-size-xs);
+  }
+}
