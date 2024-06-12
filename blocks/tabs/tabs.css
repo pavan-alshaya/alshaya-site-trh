@@ -36,7 +36,7 @@
 
 .tabs .tabs-panel {
   margin-top: -1px;
-  padding: 0 16px;
+  padding: 0 1rem;
   border: 1px solid var(--dark-color);
   overflow: auto;
 }
@@ -87,7 +87,7 @@
 .allergen-nutri-tab.tabs .tabs-panel {
   padding: 0;
   background: var(--background-color);
-  line-height: 25px;
+  line-height: 1.563rem;
   border: 1px solid #ddd;
   border-top: 5px solid var(--nutri-table-active-bg);
   border-bottom: 5px solid var(--nutri-table-active-bg);
@@ -110,7 +110,7 @@
 
 @media (width >= 900px) {
   .allergen-nutri-tab.tabs .tabs-list .tabs-tab{
-    padding: 18px 25px;
+    padding: 1.125rem 1.563px;
     font-size: var(--body-font-size-xs);
   }
 }
