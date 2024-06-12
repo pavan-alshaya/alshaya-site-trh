@@ -33,3 +33,19 @@ export default function decorate(block) {
     });
   });
 }
+
+const topSection = document.querySelector('.find-us');
+const topSectionChildEls = topSection.querySelectorAll('p');
+topSectionChildEls.forEach((a, i) => {
+  a.classList.add(`find-us-location-${i}`);
+});
+
+const textboxElement = document.getElementsByClassName('find-us-location-0');
+for (let i = 0; i < textboxElement.length; i += 1) {
+  const textfield = document.createElement('input');
+  textfield.type = 'text';
+  textfield.value = '';
+  textfield.placeholder = 'Enter your search';
+  textfield.className = 'search-location';
+  textboxElement[i].appendChild(textfield);
+}
