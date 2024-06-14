@@ -458,7 +458,6 @@ header .breadcrumbs ol li:last-of-type {
 
   .top-nav-section .default-content-wrapper {
     top: 1rem;
-    left: 1rem;
   }
 
   .nav-hamburger {
@@ -475,6 +474,8 @@ header .breadcrumbs ol li:last-of-type {
     display: flex;
     margin-right: 0.5rem !important;
     align-items: center;
+    left: 1rem;
+    position: relative;
   }
 
   .top-nav-el-1, .top-nav-el-0,
