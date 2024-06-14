@@ -23,7 +23,7 @@ const anchorLinks = document.querySelectorAll('.menu-nav-section .default-conten
 anchorLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
-    const targetId = this.getAttribute('href');
+    const targetId = link.getAttribute('href');
     const targetSection = document.querySelector(targetId);
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: 'smooth' });
