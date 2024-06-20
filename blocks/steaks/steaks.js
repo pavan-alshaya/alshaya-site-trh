@@ -12,10 +12,12 @@ export default async function decorate() {
     a.classList.add(`col-level-${i}`);
     const ulectionChildEls = a.querySelectorAll('li');
     ulectionChildEls.forEach((b, j) => {
-      b.classList.add(`col-level-${j}`);
       b.setAttribute('data-step-index', j + 1);
     });
   });
+
+  const instructionsSection = document.querySelector('.instructions');
+  instructionsSection.setAttribute('id', 'instructionsSection');
 
   const menuSection = document.querySelector('.menu-nav-section');
   menuSection.setAttribute('id', 'menuNav');
@@ -31,5 +33,41 @@ export default async function decorate() {
       left.style.top = '0px';
       left.style.width = '100%';
     }
+  });
+
+  document.querySelector('.instructions .default-content-wrapper').addEventListener('click', () => {
+    const showSection = document.querySelector('.instructions .default-content-wrapper');
+    const showectionChildEls = showSection.querySelectorAll('ul');
+    showectionChildEls.forEach((a) => {
+      if (a.getAttribute('style') === 'display:block') {
+        a.setAttribute('style', 'display:none');
+      } else {
+        a.setAttribute('style', 'display:block');
+      }
+    });
+  });
+
+  document.querySelector('.instructions .columns-wrapper .col-level-2').addEventListener('click', () => {
+    const showSection = document.querySelector('.instructions .columns-wrapper .col-level-2');
+    const showectionChildEls = showSection.querySelectorAll('ul');
+    showectionChildEls.forEach((a) => {
+      if (a.getAttribute('style') === 'display:block') {
+        a.setAttribute('style', 'display:none');
+      } else {
+        a.setAttribute('style', 'display:block');
+      }
+    });
+  });
+
+  document.querySelector('.instructions .columns-wrapper .col-level-0').addEventListener('click', () => {
+    const showSection = document.querySelector('.instructions .columns-wrapper .col-level-0');
+    const showectionChildEls = showSection.querySelectorAll('ul');
+    showectionChildEls.forEach((a) => {
+      if (a.getAttribute('style') === 'display:block') {
+        a.setAttribute('style', 'display:none');
+      } else {
+        a.setAttribute('style', 'display:block');
+      }
+    });
   });
 }

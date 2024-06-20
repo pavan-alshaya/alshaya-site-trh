@@ -28,6 +28,7 @@
   justify-content: flex-start;
   align-items: start;
   font-family: var(--nav-font-family);
+  gap: 0.5rem;
 }
 
 .steaks-container .hero > div > div {
@@ -167,6 +168,7 @@
   width: 2rem;
   flex:0;
   font-size: 1.5rem;
+  font-family: var(--heading-font-family);
   text-transform: uppercase;
   font-weight: 900;
   line-height: 1.33;
@@ -448,5 +450,23 @@
     width: 1.8rem;
     height: 1.8rem;
     padding-right: .5rem;
+  }
+
+  .instructions h3::after {
+    content: "^";
+    font-size: 1rem;
+    color: var(--white-color);
+    font-family: var(--body-font-family);
+    position: relative;
+    bottom: 0.2rem;
+    right: 0.3rem;
+    font-style: normal;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--aura-violet);
+    border-radius: 50%;
   }
 }
