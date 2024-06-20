@@ -59,8 +59,6 @@ const getConfigForEnvironment = async (environment) => {
   if (!configJSON || !configLocaleJSON) {
     const fetchGlobalConfig = fetch(buildConfigURL(env));
     const fetchLocalConfig = fetch(buildConfigURL(env, language));
-    console.log('fetchGlobalConfig'+fetchGlobalConfig);
-    console.log('fetchLocalConfig'+fetchLocalConfig);
     try {
       const responses = await Promise.all([fetchGlobalConfig, fetchLocalConfig]);
 
