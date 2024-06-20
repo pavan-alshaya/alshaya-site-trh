@@ -106,10 +106,11 @@ async function initData(srcOrigin) {
  * @param {string} innerText text content of the new element
  * @returns {HTMLElement} the newly created element
  */
-function createMarkupAndAppendToParent(type = 'div', classList = [], parent = null, innerText = '') {
+function createMarkupAndAppendToParent(type = 'div', classList = [], parent = null, innerText = '', href = '') {
   const element = document.createElement(type);
   classList.forEach((className) => element.classList.add(className));
   element.innerText = innerText;
+  element.href = href.trim();
   if (parent !== null) parent.appendChild(element);
   return element;
 }
@@ -289,13 +290,14 @@ function initStoreDetailData(store) {
 }
 
 async function decorateStoreItem(block, store) {
+  const langCode = document.documentElement.lang;
   const storeX = normaliseStoreDetail(store);
   const storeBlock = createMarkupAndAppendToParent('div', ['sf-store-block'], block);
   storeBlock.setAttribute('data-store-code', storeX.code);
   const storeItem = createMarkupAndAppendToParent('div', ['sf-store-block-item'], storeBlock);
   const storeItemEntry = createMarkupAndAppendToParent('div', ['sf-store-block-item-entry'], storeItem);
   const storeItemDist = createMarkupAndAppendToParent('div', ['sf-store-block-item-dist'], storeItem);
-  createMarkupAndAppendToParent('a', ['sf-store-name'], storeItemEntry, storeX.name);
+  createMarkupAndAppendToParent('a', ['sf-store-name'], storeItemEntry, storeX.name, `/${langCode}/${storeX.name.trim().replace(/\s+/g, '-').toLowerCase()}`);
   createMarkupAndAppendToParent('div', ['sf-store-address'], storeItemEntry, storeX.address.street);
   createMarkupAndAppendToParent('div', ['sf-store-phone'], storeItemEntry, storeX.phone.replaceAll('/', ', ').trim());
   createMarkupAndAppendToParent('hr', [], storeBlock);
