@@ -96,7 +96,8 @@ const callback = (mutationsList, observer) => {
       accordionContainerWrapperEl.className = 'accordion-wrapper-container';
       accordionContainerEl.appendChild(accordionContainerWrapperEl);
       const childElements = accordionContainerEl.querySelectorAll('.accordion-wrapper');
-      childElements.forEach((child) => {
+      childElements.forEach((child, i) => {
+        child.classList.add(`accordion-wrapper-${i}`);
         accordionContainerWrapperEl.appendChild(child);
       });
 
@@ -105,9 +106,20 @@ const callback = (mutationsList, observer) => {
       accordionContainerWrapperEl1.className = 'accordion-wrapper-container';
       accordionContainerEl1.appendChild(accordionContainerWrapperEl1);
       const childElements1 = accordionContainerEl1.querySelectorAll('.accordion-wrapper');
-      childElements1.forEach((child) => {
+      childElements1.forEach((child, i) => {
+        child.classList.add(`accordion-wrapper-${i}`);
         accordionContainerWrapperEl1.appendChild(child);
       });
+
+      const accWrapEl0 = document.querySelector('.accordion-wrapper-0');
+      const accItemEl0 = accWrapEl0.querySelectorAll('.accordion-item');
+      accItemEl0.forEach((child, i) => {
+        child.classList.add(`accordion-item-${i}`);
+      });
+      // accItemEl0.forEach((accor, i) => {
+      //   accor.classList.add(`accordion-item-${i}`);
+      // });
+
     }
   }
 };
