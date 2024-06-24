@@ -8,13 +8,7 @@
   padding: 1rem;
 }
 
-.steaks-container .hero {
-  height: 30rem;
-}
-
-.steaks-container .hero > div
-{
-  width: 70rem;
+.steaks-container .hero>div {
   margin: 7rem auto;
 }
 
@@ -324,9 +318,9 @@
     width: 100%;
   }
 
-  .steaks .section.steaks-container .hero{
-    padding: 0;
-    height: 26rem;
+  .steaks .section.steaks-container .hero {
+    padding: 2rem 0;
+    min-height: 0;
   }
 
   .steaks .section.steaks-container .hero img{
@@ -393,10 +387,6 @@
     padding: 0;
   }
 
-  .steaks .section {
-    padding: 0 2rem;
-  }
-
   .instructions ul {
     display: none;
   }
@@ -409,7 +399,7 @@
     display: none;
   }
 
-  .steaks .steak-cards .cards ul{
+  .steaks .steak-cards .cards ul {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 4rem;
@@ -448,5 +438,62 @@
     width: 1.8rem;
     height: 1.8rem;
     padding-right: .5rem;
+  }
+
+  #seasoning::after,
+  #grilling::after,
+  #stovetop::after {
+    content: "";
+    position: absolute;
+    margin-top: 13px;
+    right: 22px;
+    transform: translateY(-50%) rotate(135deg);
+    width: 9px;
+    height: 9px;
+    border: 2px solid;
+    border-width: 2px 2px 0 0;
+  }
+
+  .instructions .expanded {
+    display: block;
+  }
+
+  .collapsed {
+    display: none;
+  }
+
+  #seasoning.expanded::after,
+  #grilling.expanded::after,
+  #stovetop.expanded::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+
+@media (width > 768px) {
+  .steaks-container .hero {
+    position: absolute;
+    top: 0;
+    padding: 0;
+  }
+
+  .hero-container .hero {
+    min-height: 30rem;
+  }
+
+  .steaks-container .hero>div {
+    padding: 4rem 3rem;
+  }
+}
+
+@media (width > 1200px) {
+  .steaks-container .hero>div {
+    width: 66rem;
+  }
+}
+
+@media (width > 992px) {
+  .steaks-container .hero>div {
+    width: 48rem;
+    padding: 6rem 4rem;
   }
 }
