@@ -32,4 +32,43 @@ export default async function decorate() {
       left.style.width = '100%';
     }
   });
+
+  const seasoning = document.getElementById('seasoning');
+  const seasoningContent = document.querySelectorAll(
+    '.instructions .default-content-wrapper ul',
+  );
+  function seasoningToggleExpanded() {
+    seasoningContent.forEach((ul) => {
+      ul.classList.toggle('collapsed');
+      ul.classList.toggle('expanded');
+    });
+    seasoning.classList.toggle('expanded');
+  }
+  seasoning.addEventListener('click', seasoningToggleExpanded);
+
+  const grilling = document.getElementById('grilling');
+  const grillingContent = document.querySelectorAll(
+    '.three-columns .col-level-0 ul',
+  );
+  function grillingToggleExpanded() {
+    grillingContent.forEach((ul) => {
+      ul.classList.toggle('collapsed');
+      ul.classList.toggle('expanded');
+    });
+    grilling.classList.toggle('expanded');
+  }
+  grilling.addEventListener('click', grillingToggleExpanded);
+
+  const stovetop = document.getElementById('stovetop');
+  const stovetopContent = document.querySelectorAll(
+    '.three-columns .col-level-2 ul',
+  );
+  function stovetopToggleExpanded() {
+    stovetopContent.forEach((ul) => {
+      ul.classList.toggle('collapsed');
+      ul.classList.toggle('expanded');
+    });
+    stovetop.classList.toggle('expanded');
+  }
+  stovetop.addEventListener('click', stovetopToggleExpanded);
 }
