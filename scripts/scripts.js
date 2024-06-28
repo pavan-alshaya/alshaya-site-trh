@@ -12,6 +12,7 @@ import {
   loadBlocks,
   loadCSS,
   getMetadata,
+  fetchPlaceholders,
 } from './aem.js';
 
 const LCP_BLOCKS = []; // add your LCP blocks to the list
@@ -133,6 +134,22 @@ async function loadLazy(doc) {
   sampleRUM('lazy');
   sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
   sampleRUM.observe(main.querySelectorAll('picture > img'));
+}
+
+/**
+ * Calls placeholders for a current document language
+ * @returns placeholders for the language
+ */
+export async function fetchPlaceholdersForLocale() {
+  const langCode = document.documentElement.lang;
+  let placeholders = null;
+  if (!langCode) {
+    placeholders = await fetchPlaceholders();
+  } else {
+    placeholders = await fetchPlaceholders(`/${langCode.toLowerCase()}`);
+  }
+
+  return placeholders;
 }
 
 /**

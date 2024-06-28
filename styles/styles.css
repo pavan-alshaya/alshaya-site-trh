@@ -12,17 +12,37 @@
 
 :root {
   /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
-  --background-color: white;
+  --brand-color: #d2202f;
+  --link-color: var(--brand-color);
+  --link-hover-color: #bc1d2a;
+  --background-color: #eeecd8;
+  --text-color: #3e3c33;
   --light-color: #eee;
   --dark-color: #ccc;
-  --text-color: black;
+  --white-color: #fff;
+  --border-color: #d3d3d3;
+  --aura-pink: #e31c79;
+  --aura-blue: #22326e;
+  --aura-violet: #772583;
+  --table-background: #f7f7f7;
+  --nutri-table-background: #272e38;
+  --nutri-table-active-bg: #e74c3c;
+
+
+  /* Aura page */
+  --primary-gradient: linear-gradient(89.85deg, #772583 .13%, #e31c79 51.57%, #eeb46f 99.88%);
+
+  /* Aura page */
+  --aura-heading-font-family: almarai;
+  --aura-paragraph-heading-font-family: almarai;
+  --aura-paragraph-font-family: ptsans;
+  --aura-card-font-family: ptsansregular;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: "Roboto Mono", menlo, consolas, "Liberation Mono", monospace;
+  --body-font-family: myriadpro-light;
+  --nav-font-family: myriadpro-regular;
+  --heading-font-family: nexarustsansblack;
+  --footer-font-family: var(--nav-font-family);
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -38,10 +58,75 @@
   --heading-font-size-xs: 18px;
 
   /* header */
-  --nav-height: 64px;
+  --nav-height: 94px;
   --breadcrumbs-height: 35px;
   --header-height: var(--nav-height);
   --breadcrumbs-font-size: 14px;
+
+   /* store finder */
+   --sf-container-height: 75rem;
+   --sf-container-height-2: 70rem;
+   --sf-container-height-3: 61rem;
+   --sf-height-1: 1rem;
+   --sf-height-2: 2rem;
+   --sf-height-4: 4rem;
+   --sf-height-6: 32rem;
+   --sf-width-1: 1rem;
+   --sf-width-2: 2rem;
+   --sf-width-3: 3rem;
+
+   /* font size */
+  --font-size-1: 1rem;
+  --font-size-2: 1.2rem;
+  --font-size-3: 1.4rem;
+  --font-size-4: 1.6rem;
+  --font-size-5: 1.8rem;
+  --font-size-6: 2rem;
+  --font-size-7: 2.4rem;
+  --font-size-8: 2.8rem;
+  --font-size-9: 3.2rem;
+  --font-size-10: 4rem;
+  --font-size-11: 5.6rem;
+  --font-size-12: 6.4rem;
+
+   /* spacing */
+  --space-space-11x: 8.0rem;
+  --space-space-14x: 10rem;
+  --space-space-10x: 6.4rem;
+  --space-space-8x: 4.0rem;
+  --space-space-9x: 5rem;
+  --space-space-7x: 3.2rem;
+  --space-space-6x: 2.4rem;
+  --space-space-5x: 2rem;
+  --space-space-4x: 1.6rem;
+  --space-space-3x: 1.2rem;
+  --space-space-2x-2: 1rem;
+  --space-space-2x: 0.8rem;
+  --space-space-1x-2: 0.7rem;
+  --space-space-1x: 0.4rem;
+  --space-space-0x: 0rem;
+  --space-space-48: 4.8rem;
+  --space-space-40: 4rem;
+  --space-space-24: 2.4rem;
+  --space-space-16: 1.6rem;
+  --space-space-12: 1.2rem;
+  --spacing-xxxsmall: 0.1rem;
+  --spacing-xxsmall: 0.4rem;
+  --spacing-xsmall: 0.8rem;
+  --spacing-xsmall-2: 1.2rem;
+  --spacing-small: 1.6rem;
+  --spacing-medium: 2.4rem;
+  --spacing-big: 3.2rem;
+  --spacing-xbig: 4rem;
+  --spacing-xxbig: 4.8rem;
+  --spacing-large: 6.4rem;
+  --spacing-xlarge: 7.2rem;
+  --spacing-xxlarge: 9.6rem;
+  --spacing-huge: 12rem;
+  --spacing-xhuge: 14.4rem;
+  --spacing-xxhuge: 19.2rem;
+  --spacing-xxhuge-2: 27rem;
+  --spacing-xxxhuge: 29rem;
 }
 
 @font-face {

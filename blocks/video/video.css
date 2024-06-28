@@ -1,8 +1,8 @@
 .video {
   width: unset;
   text-align: center;
-  max-width: 800px;
-  margin: 32px auto;
+  max-width: 1000px;
+  margin: 10px auto;
 }
 
 .video.lazy-loading {
