@@ -1,6 +1,6 @@
-.accordion details {
+/* .accordion details {
   border: 1px solid var(--dark-color);
-}
+} */
 
 /* stylelint-disable-next-line no-descending-specificity */
 .accordion details + details {
@@ -9,22 +9,21 @@
 
 .accordion details summary {
   position: relative;
-  padding: 0 16px;
-  padding-right: 48px;
+  padding: 0 1.6rem;
   cursor: pointer;
   list-style: none;
-  overflow: auto;
+  /* overflow: auto; */
   transition: background-color 0.2s;
 }
 
-.accordion details[open] summary {
+/* .accordion details[open] summary {
   background-color: var(--light-color);
-}
+} */
 
-.accordion details summary:focus,
+/* .accordion details summary:focus,
 .accordion details summary:hover {
   background-color: var(--dark-color);
-}
+} */
 
 .accordion details summary::-webkit-details-marker {
   display: none;
@@ -33,8 +32,8 @@
 .accordion details summary::after {
   content: "";
   position: absolute;
-  top: 50%;
-  right: 18px;
+  bottom: -0.8rem;
+  right: 50%;
   transform: translateY(-50%) rotate(135deg);
   width: 9px;
   height: 9px;
@@ -48,10 +47,10 @@
 }
 
 .accordion details .accordion-item-body {
-  padding: 0 16px;
+  padding: 1.5rem;
 }
 
 .accordion details[open] .accordion-item-body {
-  border-top: 1px solid var(--dark-color);
+  /* border-top: 1px solid var(--dark-color); */
   background-color: var(--background-color);
 }

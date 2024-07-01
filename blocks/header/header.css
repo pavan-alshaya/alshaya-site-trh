@@ -343,6 +343,12 @@ header nav#nav .nav-sections ul > li > ul > li {
     font-size: var(--body-font-size-xs);
   }
 
+  header nav#nav .nav-sections .default-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   header nav#nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
@@ -458,7 +464,6 @@ header .breadcrumbs ol li:last-of-type {
 
   .top-nav-section .default-content-wrapper {
     top: 1rem;
-    left: 1rem;
   }
 
   .nav-hamburger {
@@ -475,6 +480,8 @@ header .breadcrumbs ol li:last-of-type {
     display: flex;
     margin-right: 0.5rem !important;
     align-items: center;
+    left: 1rem;
+    position: relative;
   }
 
   .top-nav-el-1, .top-nav-el-0,

@@ -1,0 +1,22 @@
+.accordion__content{
+    height:0;
+    overflow:hidden;
+  }
+  
+  .accordion__content--active{
+    height:auto;
+  }
+
+  .accordion {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .accordion__box {
+    width: 30%;
+    margin: 1rem;
+    cursor: pointer;
+  }
+  .button-container {
+    display: none;
+  }

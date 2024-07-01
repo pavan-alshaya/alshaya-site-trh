@@ -215,8 +215,12 @@ export default async function decorate(block) {
   navWrapper.prepend(topSection);
 
   const topSectionChildEls = topSection.querySelectorAll('p');
+  const topSectionListEls = topSection.querySelectorAll('ul');
   topSectionChildEls.forEach((a, i) => {
     a.classList.add(`top-nav-el-${i}`);
+  });
+  topSectionListEls.forEach((a, i) => {
+    a.classList.add(`top-navlist-item${i}`);
   });
 
   if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
