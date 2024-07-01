@@ -31,10 +31,23 @@ export default function decorate(block) {
     row.replaceWith(details);
 
     // Wrappering the Accordion inside another accordion
-    const accordionItems = document.querySelectorAll('.accordion-wrapper');
-    const accordionBodyItem = document.querySelector('.accordion-item .accordion-item-body');
+    // const accordionItems = document.querySelectorAll('.accordion-wrapper');
+    // const accordionBodyItem = document.querySelector('.accordion-item .accordion-item-body');
+    // accordionItems.forEach((accordion) => {
+    //   const accordionItemChildren = accordion.querySelectorAll('.accordion .accordion-item');
+    //   if (accordionItemChildren.length > 1) {
+    //     let i = 1;
+    //     while (i < accordionItemChildren.length) {
+    //       accordionBodyItem.append(accordionItemChildren[i]);
+    //       i += 1;
+    //     }
+    //   }
+    // });
+
+    const accordionItems = document.querySelectorAll('.lunch-value-offers .accordion-wrapper .acc1');
+    const accordionBodyItem = document.querySelector('.lunch-value-offers .acc1 .accordion-item .accordion-item-body');
     accordionItems.forEach((accordion) => {
-      const accordionItemChildren = accordion.querySelectorAll('.accordion .accordion-item');
+      const accordionItemChildren = accordion.querySelectorAll('.accordion-item');
       if (accordionItemChildren.length > 1) {
         let i = 1;
         while (i < accordionItemChildren.length) {
@@ -43,6 +56,19 @@ export default function decorate(block) {
         }
       }
     });
+
+    // const accordionItems1 = document.querySelectorAll('.lunch-value-offers .accordion-wrapper .acc2');
+    // const accordionBodyItem1 = document.querySelector('.lunch-value-offers .acc2 .accordion-item .accordion-item-body');
+    // accordionItems1.forEach((accordion) => {
+    //   const accordionItemChildren = accordion.querySelectorAll('.accordion-item');
+    //   if (accordionItemChildren.length > 1) {
+    //     let i = 1;
+    //     while (i < accordionItemChildren.length) {
+    //       accordionBodyItem1.append(accordionItemChildren[i]);
+    //       i += 1;
+    //     }
+    //   }
+    // });
 
     // Wrapp the accordion wrapper elemenets to new accordion wrapper container element
     // const accordionContainerEl = document.querySelector('.accordion-container');
